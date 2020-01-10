@@ -1,4 +1,6 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
+
+// import fontFile from '../../public/IBMPlexSans-Regular.woff2';
 
 export const theme = {
   maxWidth: `1400px`,
@@ -11,10 +13,26 @@ export const theme = {
 /**
  * Global styles and theming for the web site
  */
+
+/* @font-face {
+ font-family: 'IBM Plex Sans';
+ src: url('../../public/IBMPlexSans-Regular.woff2') format('woff2');
+ font-weight: normal;
+ font-style: 400;
+ font-display: fallback;
+}; */
+
+/* font-family: 'Foo';
+src: url('/path/to/foo.woff') format('woff');
+font-style: normal;
+font-weight: 400;
+font-display: fallback; */
+// @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,500i,600,600i,700,700i&display=swap');
+
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,500i,600,600i,700,700i&display=swap');
-  
-  html {
+  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,600i,700&display=swap');
+   
+   html {
     box-sizing: border-box;
     font-size: 10px;
   }
@@ -24,10 +42,11 @@ export const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 2;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: normal;
+    font-family: 'IBM Plex Sans', sans-serif !important;
+    font-weight: 600;
+    font-display: fallback;
     background: ${props => props.theme.mainColor};
   color: ${props => props.theme.mainDarkColor};
   }
