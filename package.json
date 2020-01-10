@@ -3,13 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next -p 7777",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "apollo-boost": "^0.4.7",
     "next": "9.1.6",
+    "next-with-apollo": "^4.3.0",
     "react": "16.12.0",
-    "react-dom": "16.12.0"
+    "react-dom": "16.12.0",
+    "react-icons": "^3.8.0",
+    "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "@latest",
+    "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "@latest",
+    "eslint-config-prettier": "@latest",
+    "eslint-config-react": "@latest",
+    "eslint-plugin-import": "@latest",
+    "eslint-plugin-prettier": "@latest",
+    "eslint-plugin-react": "^7.17.0",
+    "prettier": "@latest"
   }
 }
