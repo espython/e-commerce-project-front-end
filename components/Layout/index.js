@@ -6,7 +6,7 @@ import Meta from './Meta';
 import AdvertiseBar from '../AdvertiseBar/AdvertiseBar';
 
 import '../../public/styles/bootstrap.min.css';
-import { theme, StyledPage, Inner, GlobalStyle } from './GlobalTheme';
+import { theme, Inner, GlobalStyle } from './GlobalTheme';
 
 class Layout extends Component {
   render() {

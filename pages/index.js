@@ -1,10 +1,10 @@
 import React from 'react';
-import Head from 'next/head';
+import HeroSection from '../components/HeroSection/HeroSection';
 
-const Home = () => (
-  <div className="container">
-    <h1>Home page</h1>
+const LandingPage = () => (
+  <div className="" style={{ height: '2000px', padding: '0rem' }}>
+    <HeroSection />
   </div>
 );
 
-export default Home;
+export default LandingPage;
