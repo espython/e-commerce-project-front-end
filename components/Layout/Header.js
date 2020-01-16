@@ -37,7 +37,7 @@ const HeaderWrapper = styled.div`
   justify-content: space-around;
   background: '#FFFFFF' !important;
   padding: 0 2rem 0 2rem;
-  border-bottom: 0.1rem solid ${props => props.theme.color5};
+  border-bottom: 0.1rem solid ${props => props.theme.lightGray};
 
   /* height: 18rem !important; */
 
@@ -52,7 +52,7 @@ const HeaderWrapper = styled.div`
       font-family: 'Satisfy', cursive;
       font-size: 2.5rem;
       font-weight: bold;
-      color: ${props => props.theme.color2};
+      color: ${props => props.theme.orange};
     }
 
     .right-panel {

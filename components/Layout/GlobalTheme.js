@@ -14,13 +14,15 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 export const theme = {
   // maxWidth: `1400px`,
-  mainLight: `#FDFFFC`,
+  mainLight: `#ffffff`,
+  secondaryLight: `#f7fff7`,
   mainDark: `#011627`,
-  color1: 'rgba(23, 33, 33, 1)',
-  color2: '#f1641e',
-  color3: 'rgba(71, 117, 134, 1)',
-  color4: 'rgba(244, 152, 163, 1)',
-  color5: 'rgba(212, 219, 205, 1)',
+  secondaryDark: 'rgba(23, 33, 33, 1)',
+  orange: '#f1641e',
+  red: '#ff6b6b',
+  darkGreen: 'rgba(71, 117, 134, 1)',
+  redAccent: 'rgba(244, 152, 163, 1)',
+  lightGray: '#F3F3F3',
   kashmerColor: '#fdebd2',
   lightGreenColor: 'rgb(212, 233, 215)'
 };
