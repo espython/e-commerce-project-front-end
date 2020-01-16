@@ -2,6 +2,7 @@ import Styled, { css } from 'styled-components';
 
 const btnStyles = css`
   display: flex;
+  background-color: rgba(245, 245, 245, 0.3);
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -10,7 +11,6 @@ const btnStyles = css`
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background: none;
   border: none;
   outline: none;
   transition: 0.5s;
@@ -26,11 +26,10 @@ export const HeroSectionWrapper = Styled.div`
   
   position:relative;
   width:100%;
-  height:67rem;
+  height:70rem;
   display:flex;
   align-items:center;
   overflow:hidden;
-  background:black;
 
   .slide{
     min-width:100%;

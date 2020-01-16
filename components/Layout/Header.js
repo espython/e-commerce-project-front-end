@@ -36,7 +36,6 @@ const HeaderWrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   background: '#FFFFFF' !important;
-  margin-bottom: 1rem;
   padding: 0 2rem 0 2rem;
   border-bottom: 0.1rem solid ${props => props.theme.color5};
 

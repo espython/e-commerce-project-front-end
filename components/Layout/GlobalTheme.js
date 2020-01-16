@@ -13,7 +13,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 // };
 
 export const theme = {
-  maxWidth: `1400px`,
+  // maxWidth: `1400px`,
   mainLight: `#FDFFFC`,
   mainDark: `#011627`,
   color1: 'rgba(23, 33, 33, 1)',
