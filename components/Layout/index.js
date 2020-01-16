@@ -16,7 +16,7 @@ class Layout extends Component {
         <GlobalStyle />
         <AdvertiseBar />
         <Header />
-        <Inner>{this.props.children}</Inner>
+        <Inner className="container-fluid">{this.props.children}</Inner>
       </ThemeProvider>
     );
   }

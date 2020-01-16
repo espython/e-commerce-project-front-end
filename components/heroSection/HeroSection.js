@@ -3,9 +3,9 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 import { HeroSectionWrapper } from './heroSectionStyles';
 import ImgComp from './ImgComp';
-import ButtonComp from '../button/ButtonComp';
 
 const imgSliderList = [
+  `https://images.pexels.com/photos/919436/pexels-photo-919436.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940`,
   `https://images.pexels.com/photos/1051744/pexels-photo-1051744.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940`,
   `https://images.unsplash.com/photo-1462392246754-28dfa2df8e6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80`,
   `https://images.unsplash.com/photo-1477901492169-d59e6428fc90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80`,
@@ -25,6 +25,8 @@ export default class HeroSection extends Component {
   state = {
     x: 0
   };
+
+  componentDidMount() {}
 
   goLeft = () => {
     let { x } = this.state;

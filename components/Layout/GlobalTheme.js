@@ -94,6 +94,7 @@ export const StyledPage = styled.div`
 
 export const Inner = styled.div`
   max-width: ${props => props.theme.maxWidth};
-  margin: 0 auto;
+  margin: 0 auto !important;
+  padding: 0 !important;
   /* padding: 2rem; */
 `;

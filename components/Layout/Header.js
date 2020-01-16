@@ -9,7 +9,7 @@ import BottomNav from './BottomNav/BottomNav';
 export default class Header extends Component {
   render() {
     return (
-      <HeaderWrapper className="container-fluid bg-light">
+      <HeaderWrapper className="container-fluid">
         {/* upper nav */}
         <div className="top-nav py-4">
           <h2>Cotton Store</h2>
