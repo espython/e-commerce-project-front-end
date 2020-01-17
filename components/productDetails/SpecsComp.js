@@ -43,9 +43,9 @@ class SpecsComp extends Component {
             <button className="dot btn bg-dark"></button>
           </div>
         </div>
-        <div className="row size d-flex flex-column my-3 ml-3">
+        <div className="row size d-flex flex-column my-1 ml-3">
           <h3>Size:</h3>
-          <div className="sizes mx-5 my-4 pl-5 row">
+          <div className="sizes ml-5 my-2 pl-5 row">
             <button type="button" className="btn btn-outline-secondary">
               S/36
             </button>
@@ -70,7 +70,7 @@ class SpecsComp extends Component {
           <h3>Qty:</h3>
           <div className="qty ml-5 d-flex justify-content-around align-items-center">
             <button
-              className="btn btn-outline-secondary mx-3"
+              className="btn btn-outline-secondary d-flex align-items-center justify-content-center mx-3"
               onClick={this.removeQty}
             >
               &#45;
@@ -84,7 +84,7 @@ class SpecsComp extends Component {
             </button>
           </div>
           </div>
-          <div className="row ml-5 px-5 mt-5 mb-3 d-flex justify-content-start align-items-center">
+          <div className="row ml-5 px-5 mt-2 mb-2 d-flex justify-content-start align-items-center">
             <button className="heart mx-5 py-2 btn btn-lg  btn-outline-secondary"><FaRegHeart/></button>
             <button className="add-cart d-flex btn btn-lg btn-danger align-items-center justify-content-center">
               <span className="ml-3">
@@ -122,8 +122,10 @@ const Container = Styled.div`
 
   .sizes{
     .btn{
-    font-size:2rem !important;
+      font-size:1.5rem !important;
       margin-right:1rem;
+      padding:none !important;
+      margin:none !important;
       margin-bottom:1rem;
       border:0.2rem solid;
       &:focus{
@@ -137,16 +139,14 @@ const Container = Styled.div`
   .qty{
     p{
       font-size:2.4rem;
-      font-weight:500;
+      font-weight:700;
     }
     .btn{
-      height: 4.8rem;
-      width: 4.8rem;
+      height: 3.4rem;
+      width: 3.4rem;
       border-radius: 50%;
-      display: inline-block;
-      text-align:center;
-      font-size:2.4rem;
-      font-weight:500;
+      font-size:1.7rem;
+      font-weight:700;
       &:focus{
         border:0.2rem solid ${props => props.theme.red} !important;
         box-shadow: 0px 0px 5px 4px ${props => props.theme.red} !important;

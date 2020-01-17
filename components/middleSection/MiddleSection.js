@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-import Card from '../common/card/Card';
-import AdvertiseRow from '../common/advertiseRow/AdvertiseRow';
+import { Card, AdvertiseRow } from '../common';
 
 class MiddleSection extends Component {
   render() {
