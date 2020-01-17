@@ -30,9 +30,9 @@ const StylesWrapper = Styled.div`
     flex:2;
     &:focus{
       background-color:#FFFFFF;
-      border-top:0.2rem solid ${props => props.theme.color2};
-      border-bottom:0.2rem solid ${props => props.theme.color2};
-      border-left:0.2rem solid ${props => props.theme.color2};
+      border-top:0.2rem solid ${props => props.theme.orange};
+      border-bottom:0.2rem solid ${props => props.theme.orange};
+      border-left:0.2rem solid ${props => props.theme.orange};
     }
   }
 

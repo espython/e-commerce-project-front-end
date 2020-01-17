@@ -2,11 +2,12 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:better-styled-components/recommended",
     "plugin:prettier/recommended",
     "plugin:import/errors",
     "plugin:import/warnings"
   ],
-  "plugins": ["react", "prettier"],
+  "plugins": ["react", "prettier","better-styled-components"],
   "env": {
     "browser": true,
     "jasmine": true,
@@ -17,7 +18,8 @@
     "prettier/prettier": ["error", { "singleQuote": true }],
     "react/react-in-jsx-scope":"off",
     "react/prop-types":"warn",
-    "no-unused-vars":"warn"
+    "no-unused-vars":"warn",
+    "better-styled-components/sort-declarations-alphabetically": 2
   },
   "settings": {
     "react": {

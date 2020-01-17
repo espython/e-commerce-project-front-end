@@ -23,6 +23,7 @@
     "eslint": "latest",
     "eslint-config-prettier": "latest",
     "eslint-config-react": "latest",
+    "eslint-plugin-better-styled-components": "^1.1.2",
     "eslint-plugin-import": "test",
     "eslint-plugin-prettier": "latest",
     "eslint-plugin-react": "^7.17.0",

@@ -3,11 +3,12 @@ import Styled from 'styled-components';
 
 import Badge from './saleBadge';
 import PriceComp from './PriceComp';
+import SpecsComp from './SpecsComp';
 
 export default class Details extends Component {
   render() {
     return (
-      <Wrapper className="col col-lg-5 d-flex">
+      <Wrapper className="col col-lg-5 d-flex flex-column">
         <div className="header">
           <div className="d-flex flex-row justify-content-between  align-items-center pr-3">
             <div>
@@ -20,7 +21,7 @@ export default class Details extends Component {
           <PriceComp />
           <div className="line"></div>
         </div>
-        <div></div>
+        <SpecsComp />
         <div></div>
         <div></div>
       </Wrapper>

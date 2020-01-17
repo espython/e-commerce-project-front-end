@@ -55,8 +55,8 @@ export const ButtonWrapper = Styled.div`
   }
   .btn{
     width:16.4rem;
-    background-color:${props => props.theme.color1} !important;
-    color:${props => props.theme.mainLight};
+    background-color:${props => props.theme.mainDark} !important;
+    color:${props => props.theme.kashmerColor};
     font-size:1.6rem;
     font-style: normal;
     font-weight: 600;

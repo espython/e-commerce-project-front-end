@@ -19,7 +19,7 @@ export const theme = {
   mainDark: `#011627`,
   secondaryDark: 'rgba(23, 33, 33, 1)',
   orange: '#f1641e',
-  red: '#ff6b6b',
+  red: '#dc3545',
   darkGreen: 'rgba(71, 117, 134, 1)',
   redAccent: 'rgba(244, 152, 163, 1)',
   lightGray: '#F3F3F3',
