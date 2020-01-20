@@ -78,8 +78,8 @@ const Wrapper = Styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     .cart{
-       opacity:0;
-        transition: opacity 0.6s ease-out;
+      opacity:0;
+      transition: opacity 0.6s ease-out;
       }
     &:hover{
       .cart{

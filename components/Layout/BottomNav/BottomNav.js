@@ -1,67 +1,91 @@
 import React, { Component } from 'react';
 
-import { BottomNavWrapper } from './BottomNavStyles';
+import { BottomNavWrapper, ItemWrapper } from './BottomNavStyles';
+// import DropDownMenu from '../../common/dropMenu/DropDownMenu';
+import DropDownComp from '../../common/dropMenu/DropDownComp';
 
 class BottomNav extends Component {
+  state = {
+    menuItems: []
+  };
   render() {
+    const { menuItems } = this.state;
     return (
-      <BottomNavWrapper>
+      <BottomNavWrapper className="container-fluid justify-content-around">
         <ul className="nav justify-content-center">
-          <li className="nav-item">
-            <a className="nav-link active" href="#">
-              New Weekly
-            </a>
-          </li>
-          <li className="nav-item">
+          {menuItems.map((item, index) => (
+            <ItemWrapper key={index}>
+              <a className="nav-link" href="#">
+                Winter 2020
+              </a>
+            </ItemWrapper>
+          ))}
+          <ItemWrapper>
             <a className="nav-link" href="#">
               Winter 2020
             </a>
-          </li>
-          <li className="nav-item">
+            <DropDownComp />
+          </ItemWrapper>
+          <ItemWrapper className="nav-item">
+            <a className="nav-link" href="#">
+              Winter 2020
+            </a>
+            <DropDownComp />
+          </ItemWrapper>
+          <ItemWrapper className="nav-item">
             <a className="nav-link" href="#">
               Women
             </a>
-          </li>
-          <li className="nav-item">
+            <DropDownComp />
+          </ItemWrapper>
+          <ItemWrapper className="nav-item">
             <a className="nav-link" href="#">
               Men
             </a>
-          </li>
-          <li className="nav-item">
+            <DropDownComp />
+          </ItemWrapper>
+          <ItemWrapper className="nav-item">
             <a className="nav-link active" href="#">
               Plus Size
             </a>
-          </li>
-          <li className="nav-item">
+            <DropDownComp />
+          </ItemWrapper>
+          <ItemWrapper className="nav-item">
             <a className="nav-link active" href="#">
               Bags
             </a>
-          </li>
-          <li className="nav-item">
+            <DropDownComp />
+          </ItemWrapper>
+          <ItemWrapper className="nav-item">
             <a className="nav-link active" href="#">
               Shoes
             </a>
-          </li>
-          <li className="nav-item">
+            <DropDownComp />
+          </ItemWrapper>
+          <ItemWrapper className="nav-item">
             <a className="nav-link active" href="#">
               Kids & Moms
             </a>
-          </li>
-          <li className="nav-item">
+            <DropDownComp />
+          </ItemWrapper>
+          <ItemWrapper className="nav-item">
             <a className="nav-link active" href="#">
               Accessories & Beauty
             </a>
-          </li>
-          <li className="nav-item">
+            <DropDownComp />
+          </ItemWrapper>
+          <ItemWrapper className="nav-item">
             <a className="nav-link active" href="#">
               Sales
             </a>
-          </li>
-          <li className="nav-item">
+            <DropDownComp />
+          </ItemWrapper>
+          <ItemWrapper className="nav-item">
             <a className="nav-link active" href="#">
               Brands
             </a>
-          </li>
+            <DropDownComp />
+          </ItemWrapper>
         </ul>
       </BottomNavWrapper>
     );

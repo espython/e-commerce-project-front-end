@@ -23,9 +23,7 @@ export default class Header extends Component {
           </div>
         </div>
         {/* bottom nav */}
-        <div className="">
-          <BottomNav />
-        </div>
+        <BottomNav />
       </HeaderWrapper>
     );
   }

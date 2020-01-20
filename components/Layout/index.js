@@ -11,12 +11,12 @@ import { theme, Inner, GlobalStyle } from './GlobalTheme';
 class Layout extends Component {
   render() {
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme} className="container">
         <Meta />
         <GlobalStyle />
         <AdvertiseBar />
         <Header />
-        <Inner className="container-fluid">{this.props.children}</Inner>
+        <Inner>{this.props.children}</Inner>
       </ThemeProvider>
     );
   }
