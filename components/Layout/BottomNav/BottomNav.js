@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 import { BottomNavWrapper, ItemWrapper } from './BottomNavStyles';
 // import DropDownMenu from '../../common/dropMenu/DropDownMenu';
 import DropDownComp from '../../common/dropMenu/DropDownComp';
+import { menuItems } from './menuItems';
 
 class BottomNav extends Component {
   state = {
-    menuItems: []
+    menuItems: menuItems
   };
   render() {
     const { menuItems } = this.state;
@@ -16,11 +17,12 @@ class BottomNav extends Component {
           {menuItems.map((item, index) => (
             <ItemWrapper key={index}>
               <a className="nav-link" href="#">
-                Winter 2020
+                {item.name}
               </a>
+              <DropDownComp data={item.data} />
             </ItemWrapper>
           ))}
-          <ItemWrapper>
+          {/* <ItemWrapper>
             <a className="nav-link" href="#">
               Winter 2020
             </a>
@@ -85,7 +87,7 @@ class BottomNav extends Component {
               Brands
             </a>
             <DropDownComp />
-          </ItemWrapper>
+          </ItemWrapper> */}
         </ul>
       </BottomNavWrapper>
     );

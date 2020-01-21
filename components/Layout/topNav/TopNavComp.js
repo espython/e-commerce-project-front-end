@@ -9,7 +9,7 @@ import SearchBar from '../../searchBar/SearchBar';
 export default class TopNavComp extends Component {
   render() {
     return (
-      <div className="top-nav d-flex justify-content-center align-items-center py-4">
+      <Wrapper className="top-nav d-flex justify-content-around align-items-center py-4">
         <h2>Cotton Store</h2>
         <SearchBar className="search-bar" />
         <div className="right-panel">
@@ -19,7 +19,7 @@ export default class TopNavComp extends Component {
             <FiShoppingCart />
           </div>
         </div>
-      </div>
+      </Wrapper>
     );
   }
 }
@@ -27,11 +27,10 @@ export default class TopNavComp extends Component {
 const Wrapper = Styled.div`
 
    /* top Nav */
-   .top-nav {
-    /* display: flex;
+    flex:3;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center; */
+    align-items: center;
 
     h2 {
       font-family: 'Satisfy', cursive;
@@ -56,6 +55,4 @@ const Wrapper = Styled.div`
         font-size: 3rem;
       }
     }
-  }
-
 `;

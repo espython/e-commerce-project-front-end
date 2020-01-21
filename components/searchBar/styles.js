@@ -2,31 +2,33 @@ import Styled from 'styled-components';
 
 const StylesWrapper = Styled.div`
 
-  /* display:flex;
+  display:flex;
   align-items:center;
-  justify-content:center; */
+  justify-content:center;
   /* margin-right:10rem;
   margin-left:10rem; */
   background-color:#E0F7FA;
-  border-radius: 50px;
-  /* flex:2; */
+  border-radius: 5rem;
+  margin:0 3rem;
+  flex:2;
  
 
   
 
   input{
+    
     padding-left:2rem;
     padding-right:2rem;
     border:none;
     background-color:#E0F7FA;
     text-decoration: none;
     height:5rem;
+    flex:2;
     /* border-radius: 25px; */
     border-top-left-radius: 5rem;
     border-bottom-left-radius: 5rem;
     transition: background-color 0.1s, border-top 0.1s, border-bottom 0.1s, border-left 0.1s;
     transition-timing-function:ease-in-out;
-    /* flex:2; */
     &:focus{
       background-color:#FFFFFF;
       border-top:0.2rem solid ${props => props.theme.orange};
@@ -36,6 +38,7 @@ const StylesWrapper = Styled.div`
   }
 
   .btn-search {
+    background-color:transparent;
     color:${props => props.theme.mainDark};
     border:none ;
     border-top-right-radius: 5rem;

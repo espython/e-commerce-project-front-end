@@ -10,7 +10,7 @@ export default class SearchBar extends Component {
   render() {
     const { inputIsFocused } = this.state;
     return (
-      <StylesWrapper>
+      <StylesWrapper className="d-flex">
         <input
           placeholder="search ..."
           onFocus={() => this.setState({ inputIsFocused: true })}
@@ -18,7 +18,7 @@ export default class SearchBar extends Component {
         />
         <button
           type="submit"
-          className={inputIsFocused ? `btn-focus` : `btn-search`}
+          className={inputIsFocused ? `btn-search btn-focus` : `btn-search`}
         >
           <FaSearch />
         </button>

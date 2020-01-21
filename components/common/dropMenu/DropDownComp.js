@@ -1,12 +1,14 @@
 import React from 'react';
 import { DropdownWrapper } from '../../Layout/BottomNav/BottomNavStyles';
 
-export default function DropDownComp() {
+export default function DropDownComp({ data }) {
   return (
     <DropdownWrapper className="container">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      {data.map((item, index) => (
+        <a href="#" key={index}>
+          {item}
+        </a>
+      ))}
     </DropdownWrapper>
   );
 }
