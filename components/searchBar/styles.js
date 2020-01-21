@@ -2,15 +2,14 @@ import Styled from 'styled-components';
 
 const StylesWrapper = Styled.div`
 
-  display:flex;
+  /* display:flex;
   align-items:center;
-  justify-content:center;
-  margin-right:10rem;
-  margin-left:10rem;
+  justify-content:center; */
+  /* margin-right:10rem;
+  margin-left:10rem; */
   background-color:#E0F7FA;
   border-radius: 50px;
- 
-  flex:2;
+  /* flex:2; */
  
 
   
@@ -27,7 +26,7 @@ const StylesWrapper = Styled.div`
     border-bottom-left-radius: 5rem;
     transition: background-color 0.1s, border-top 0.1s, border-bottom 0.1s, border-left 0.1s;
     transition-timing-function:ease-in-out;
-    flex:2;
+    /* flex:2; */
     &:focus{
       background-color:#FFFFFF;
       border-top:0.2rem solid ${props => props.theme.orange};
@@ -37,8 +36,7 @@ const StylesWrapper = Styled.div`
   }
 
   .btn-search {
-    background-color: transparent;
-    color:${props => props.theme.color1};
+    color:${props => props.theme.mainDark};
     border:none ;
     border-top-right-radius: 5rem;
     border-bottom-right-radius: 5rem;
@@ -54,7 +52,7 @@ const StylesWrapper = Styled.div`
     
   }
   .btn-focus{
-      background-color: ${props => props.theme.color2};
+      background-color: ${props => props.theme.orange} !important;
       color:#F5F5F5;
     }
 

@@ -11,7 +11,7 @@ import { theme, Inner, GlobalStyle } from './GlobalTheme';
 class Layout extends Component {
   render() {
     return (
-      <ThemeProvider theme={theme} className="container">
+      <ThemeProvider theme={theme} className="container-fluid">
         <Meta />
         <GlobalStyle />
         <AdvertiseBar />

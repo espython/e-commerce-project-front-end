@@ -6,7 +6,7 @@ const Wrapper = Styled.div`
   background: ${props => props.theme.kashmerColor};
   color: ${props => props.theme.secondaryDark} !important;
   .car{
-    font-size:1.8rem;
+    font-size:1.3rem;
   }
   p{
     font-weight:500 !important;

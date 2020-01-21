@@ -18,7 +18,7 @@ export default class SearchBar extends Component {
         />
         <button
           type="submit"
-          className={inputIsFocused ? `btn-search btn-focus` : `btn-search`}
+          className={inputIsFocused ? `btn-focus` : `btn-search`}
         >
           <FaSearch />
         </button>
