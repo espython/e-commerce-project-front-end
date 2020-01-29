@@ -5,9 +5,8 @@
     "plugin:import/warnings",
     "plugin:react/recommended",
     "plugin:prettier/recommended"
-    
   ],
-  "plugins": ["react", "prettier"],
+  "plugins": ["react", "prettier", "graphql"],
   "env": {
     "browser": true,
     "jasmine": true,
@@ -16,9 +15,9 @@
   },
   "rules": {
     "prettier/prettier": ["error", { "singleQuote": true }],
-    "react/react-in-jsx-scope":"off",
-    "react/prop-types":"warn",
-    "no-unused-vars":"warn"
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "warn",
+    "no-unused-vars": "warn"
   },
   "settings": {
     "react": {

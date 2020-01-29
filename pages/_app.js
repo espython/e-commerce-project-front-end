@@ -1,5 +1,5 @@
 import App from 'next/app';
-import { ApolloProvider } from 'react-apollo';
+import { ApolloProvider } from '@apollo/react-hooks';
 
 import Layout from '../components/Layout';
 import WithData from '../lib/withData';
@@ -21,7 +21,7 @@ class MainApp extends App {
     return (
       <ApolloProvider client={apollo}>
         <Layout>
-          <Component />
+          <Component {...pageProps} />
         </Layout>
       </ApolloProvider>
     );

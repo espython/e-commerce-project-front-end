@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from 'next/link';
 import Styled from 'styled-components';
 
 import { FiShoppingCart } from 'react-icons/fi';
@@ -10,7 +11,11 @@ export default class TopNavComp extends Component {
   render() {
     return (
       <Wrapper className="top-nav d-flex justify-content-around align-items-center py-4">
-        <h2>Cotton Store</h2>
+        <h2>
+          <Link href="/">
+            <a>Cotton Store</a>
+          </Link>
+        </h2>
         <SearchBar className="search-bar" />
         <div className="right-panel">
           <MdAccountCircle className="account-icon" />
@@ -32,7 +37,7 @@ const Wrapper = Styled.div`
     justify-content: space-between;
     align-items: center;
 
-    h2 {
+    h2 a {
       font-family: 'Satisfy', cursive;
       font-size: 2.5rem;
       font-weight: bold;

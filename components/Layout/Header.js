@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Router from 'next/router';
+import NProgress from 'nprogress';
 
 import BottomNav from './BottomNav/BottomNav';
 import TopNav from './topNav/TopNavComp';
 
-export default class Header extends Component {
+Router.events.on('routeChangeStart', url => {
+  console.log(`Loading: ${url}`);
+  NProgress.start();
+});
+Router.events.on('routeChangeComplete', () => NProgress.done());
+
+Router.events.on('routeChangeError', () => NProgress.done());
+
+class Header extends Component {
   render() {
     return (
       <HeaderWrapper className="container-fluid">
@@ -27,3 +37,5 @@ const HeaderWrapper = styled.div`
 
   /* height: 18rem !important; */
 `;
+
+export default Header;
