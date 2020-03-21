@@ -17,6 +17,7 @@ class Items extends Component {
       <div>
         <Query query={All_ITEMS_QUERY}>
           {({ data, error, loading }) => {
+            console.log('data', data);
             if (loading) return <p>Loading ...</p>;
             if (error) return <p>Error : {error.message}</p>;
             return data.items.map(item => {

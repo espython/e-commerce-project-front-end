@@ -8,13 +8,18 @@ import ChooseCategoryComp from './ChooseCategoryComp';
 import ChooseDivision from './ChooseDivision';
 import { Mutation } from 'react-apollo';
 
+// const CREATE_IMAGE_MUTATION = gql`
+// mutation CREATE_IMAGE_MUTATION()
+
+// `;
+
 const CREATE_ITEM_MUTATION = gql`
   mutation CREATE_ITEM_MUTATION(
     $title: String!
     $category: String!
     $division: String!
     $description: String!
-    $image: String!
+    $images: [Image]!
     $largeImage: String!
     $price: Int!
     $finalPrice: Int!
@@ -24,12 +29,13 @@ const CREATE_ITEM_MUTATION = gql`
       category: $category
       division: $division
       description: $description
-      image: $image
+      images: $images
       largeImage: $largeImage
       price: $price
       finalPrice: $finalPrice
     ) {
       id
+      images
     }
   }
 `;
@@ -40,8 +46,13 @@ class AddProductComp extends Component {
     category: '',
     division: '',
     description: '',
-    image: '',
+    mainImage: '',
+    smallImage0: '',
+    smallImage1: '',
+    smallImage2: '',
+    smallImage3: '',
     largeImage: '',
+    images: [],
     price: 0,
     finalPrice: 0
   };
@@ -60,6 +71,27 @@ class AddProductComp extends Component {
 
     console.log('submit State', response);
   };
+  // upload Image
+  uploadFile = async (e, images) => {
+    console.log('upload file');
+
+    const { name, files } = e.target;
+    console.log('Target ==>', e.target);
+    const data = new FormData();
+    data.append('file', files[0]);
+    data.append('upload_preset', 'cotton-store');
+    const res = await fetch(
+      'https://api.cloudinary.com/v1_1/espython/image/upload',
+      { method: 'POST', body: data }
+    );
+    const file = await res.json();
+    // images.push({ [name]: file.secure_url });
+    console.log('image state', this.state);
+    // this.setState({ images });
+    this.setState({
+      [name]: file.secure_url
+    });
+  };
 
   // render Method
   render() {
@@ -68,7 +100,12 @@ class AddProductComp extends Component {
       price,
       division,
       category,
-      image,
+      mainImage,
+      smallImage0,
+      smallImage1,
+      smallImage2,
+      smallImage3,
+      images,
       largeImage,
       description,
       finalPrice
@@ -81,12 +118,46 @@ class AddProductComp extends Component {
           <Wrapper className="container">
             <div className="row justify-content-center align-items-between">
               <div className="col col-sm-6 col-xs-12 d-flex flex-column justify-content-center">
-                <ImageComp size={4} />
+                <ImageComp
+                  size={4}
+                  name="mainImage"
+                  uploadFile={this.uploadFile}
+                  images={images}
+                  imgSrc={mainImage}
+                />
 
                 <div className="row d-flex justify-content-around my-5 sm-images">
-                  {[...Array(4).keys()].map((item, index) => (
-                    <ImageComp size={1.2} key={index} />
-                  ))}
+                  <ImageComp
+                    size={1.2}
+                    uploadFile={this.uploadFile}
+                    name="smallImage0"
+                    images={images}
+                    imgSrc={smallImage0}
+                  />
+
+                  <ImageComp
+                    size={1.2}
+                    uploadFile={this.uploadFile}
+                    name="smallImage1"
+                    images={images}
+                    imgSrc={smallImage1}
+                  />
+
+                  <ImageComp
+                    size={1.2}
+                    uploadFile={this.uploadFile}
+                    name="smallImage2"
+                    images={images}
+                    imgSrc={smallImage2}
+                  />
+
+                  <ImageComp
+                    size={1.2}
+                    uploadFile={this.uploadFile}
+                    images={images}
+                    name="smallImage3"
+                    imgSrc={smallImage3}
+                  />
                 </div>
                 {/* price part */}
                 <form className="form-inline">
@@ -98,6 +169,7 @@ class AddProductComp extends Component {
                       value={price}
                       type="number"
                       id="price"
+                      required
                       placeholder="0.00"
                       className="form-control form-control-lg mx-sm-3"
                       aria-describedby="passwordHelpInline"
@@ -142,6 +214,7 @@ class AddProductComp extends Component {
                       id="exampleInputEmail1"
                       aria-describedby="emailHelp"
                       placeholder="Enter Name"
+                      required
                     />
 
                     <small id="emailHelp" className="form-text text-muted">
