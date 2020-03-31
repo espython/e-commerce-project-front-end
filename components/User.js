@@ -1,7 +1,7 @@
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import PropTypes from 'prop-types';
-import router from 'next/router';
+import SpinnerComp from './spinner-comp/SpinnerComp';
 
 const CURRENT_USER_QUERY = gql`
   query {
@@ -17,7 +17,7 @@ const CURRENT_USER_QUERY = gql`
 const User = props => (
   <Query {...props} query={CURRENT_USER_QUERY}>
     {({ loading, error, data }) => {
-      if (loading) return 'Loading...';
+      if (loading) return <SpinnerComp loading={loading} />;
       if (error) return `Error! ${error.message}`;
 
       return <>{props.children(data)}</>;

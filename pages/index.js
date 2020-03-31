@@ -4,7 +4,7 @@ import MiddleSection from '../components/middleSection/MiddleSection';
 
 const LandingPage = () => {
   return (
-    <div className="">
+    <div className="container">
       <HeroSection />
       <MiddleSection />
     </div>
