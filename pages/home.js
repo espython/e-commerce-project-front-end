@@ -1,13 +1,19 @@
-import React, { Component } from 'react';
-import { ProductCard } from '../components/common';
-import Items from '../components/items/Items';
-export default class Home extends Component {
-  render() {
-    return (
-      <div className="container">
-        <h4>Home Page </h4>
-        <Items />
-      </div>
-    );
-  }
-}
+import React from 'react';
+import Home from '../components/Home';
+import User from '../components/User';
+import Router from 'next/router';
+
+const HomePage = () => (
+  <User>
+    {data => {
+      if (data && data.user) {
+        return <Home isLoggedIn={data} />;
+      } else {
+        Router.push('/');
+        return null;
+      }
+    }}
+  </User>
+);
+
+export default HomePage;

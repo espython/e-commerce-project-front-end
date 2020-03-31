@@ -17,7 +17,8 @@
     "prettier/prettier": ["error", { "singleQuote": true }],
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "warn",
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "no-console":"warn"
   },
   "settings": {
     "react": {

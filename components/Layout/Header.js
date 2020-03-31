@@ -16,10 +16,12 @@ Router.events.on('routeChangeError', () => NProgress.done());
 
 class Header extends Component {
   render() {
+    const { show, setShow } = this.props;
+
     return (
       <HeaderWrapper className="container-fluid">
         {/* upper nav */}
-        <TopNav />
+        <TopNav show={show} setShow={setShow} />
         {/* bottom nav */}
         <BottomNav />
       </HeaderWrapper>

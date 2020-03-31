@@ -47,8 +47,6 @@ font-display: fallback; */
 // @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,500i,600,600i,700,700i&display=swap');
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,600i,700&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
 
    html {
      height:100vh;

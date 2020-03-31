@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 const SignupWrapper = styled.div`
-  ${({ show }) => console.log('show', show)}
-
   .modal {
     display: ${({ show }) => (!show ? 'none' : 'flex')};
     justify-content: center;
@@ -23,7 +21,7 @@ const SignupWrapper = styled.div`
     /* margin: 5% auto 15% auto; 5% from the top, 15% from the bottom and centered */
     padding: 1rem 2rem 2rem 2rem;
     border: 1px solid #888;
-    max-width: 50%; /* Could be more or less, depending on screen size */
+    max-width: 65%; /* Could be more or less, depending on screen size */
   }
 
   /* input field */

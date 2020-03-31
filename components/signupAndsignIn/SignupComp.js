@@ -28,7 +28,7 @@ export default class SignupComp extends Component {
   };
   render() {
     const { show, setSignUp, setShow } = this.props;
-    console.log('show', show);
+
     return (
       <Mutation mutation={SIGNUP_MUTATION} variables={this.state}>
         {(signup, { error, loading }) => (
